@@ -30,3 +30,13 @@ Route::get('hello',function (Request $request){
 Route::get('user/detail/{id}/{name?}',function($id,$name = null){
     return "User detail: ".$id. $name;
 });
+
+Route::get('master',function(){
+    return view('client.layout.master');
+});
+Route::get('product',function(){
+    return view('client.pages.product.list');
+});
+Route::get('blog/detail',function(){
+    return view('client.pages.blog.detail');
+});
